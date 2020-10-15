@@ -16,6 +16,8 @@ module.exports = {
                 primaryColorDark: '#5F3644',
                 secondaryColor: '#AF7D8E',
                 secondaryColorDark: '#8C5668',
+                tertiaryColor: '#E8E187',
+                tertiaryColorDark: '#D9CF3A',
                 headerDark: '#202020',
                 headerLight: '#404040',
                 bodyCopyDark: '#606060',

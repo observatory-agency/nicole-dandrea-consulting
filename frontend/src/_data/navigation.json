@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "text": "Services",
+            "url": "#services"
+        },
+        {
+            "text": "About Nicole",
+            "url": "#about"
+        },
+        {
+            "text": "Testimonials",
+            "url": "#testimonials"
+        },
+        {
+            "text": "Freebies",
+            "url": "#freebies"
+        },
+        {
+            "text": "Contact",
+            "url": "#contact"
+        },
+        {
+            "text": "Blog",
+            "url": "/blog"
+        }
+    ]
+}

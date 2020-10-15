@@ -1,0 +1,22 @@
+{
+  "name": "nicole-dandrea",
+  "version": "1.0.0",
+  "description": "Marketing website for Nicole D'andrea Consulting",
+  "main": ".eleventy.js",
+  "author": "Pete Lloyd",
+  "license": "MIT",
+  "scripts": {
+    "dev": "postcss src/css/tailwind.css -o src/css/styles.css && eleventy --serve",
+    "build": "NODE_ENV=production postcss src/css/tailwind.css > src/css/styles.css && eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@tailwindcss/typography": "^0.2.0",
+    "@tailwindcss/ui": "^0.6.2",
+    "autoprefixer": "^10.0.1",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.1.0",
+    "tailwindcss": "^1.9.2"
+  }
+}

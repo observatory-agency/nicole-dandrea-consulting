@@ -15,7 +15,7 @@ service3:
     title: '1:1 Business Coaching'
     copy: 'Have a specific goal in mind or need a tuneup? Work with me on a customized short or long-term project to refine your brand and message, automate systems, build a budget, streamline your sales process, motivate your team, improve retention and drive big revenue.'
     link: 'https://blackbirdyogastudio.lpages.co/60-minute-strategy-session/'
-    img: '/img/one-one-coaching.jpg'
+    img: '/img/one-one-coaching.webp'
 service4:
     title: 'In-Person Studio Strategy VIP Day'
     copy: 'How would it feel to spend a day devoted to your business’ transformation? Join me at my cozy private office in downtown Montclair, NJ for a deep dive into one or two areas of your business. You’ll choose our focus, then we’ll jump into creation mode. You’ll leave the 3.5 hour session with completed action plans, content calendars, service menus and more. Expect to leave feeling recharged about being the leader you are!'

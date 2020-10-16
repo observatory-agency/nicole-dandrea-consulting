@@ -1,16 +1,16 @@
-<header role="banner" class="relative z-50 bg-white shadow-xl">
-    <div class="flex items-center justify-between py-6 mx-auto max-w-7xl sm:px-6 md:justify-start">
+<header x-data="{ open: false }" role="banner" class="relative z-50 bg-white shadow-xl">
+    <div class="flex items-center justify-between px-4 py-4 mx-auto sm:py-6 max-w-7xl sm:px-6 md:justify-start">
         <div class="lg:w-0 lg:flex-1">
             <a href="#" class="flex">
-                <img class="w-auto h-20" src="/img/logos/logo.png" alt="Workflow" />
+                <img class="w-auto h-16 sm:h-20" src="/img/logos/logo.png" alt="Nicole D'Andrea Consulting Logo" />
             </a>
         </div>
-        <div class="-my-2 -mr-2 md:hidden">
+        <div class="md:hidden">
             <button
+                @click="open = true"
                 type="button"
-                class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
+                class="inline-flex items-center justify-center p-2 transition duration-150 ease-in-out rounded-md text-headerDark hover:text-bodyCopyDark hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-bodyCopyDark"
             >
-                <!-- Heroicon name: menu -->
                 <svg
                     class="w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
@@ -36,22 +36,29 @@
     </div>
 
     <!-- Mobile menu -->
-    <div class="absolute inset-x-0 top-0 hidden p-2 transition origin-top-right transform">
+    <div
+        x-show="open"
+        x-transition:enter="duration-300 ease-out"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="duration-200 ease-in"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-95"
+        @click.away="open = false"
+        class="absolute inset-x-0 top-0 p-2 transition origin-top-right transform"
+    >
         <div class="rounded-lg shadow-lg">
             <div class="bg-white divide-y-2 rounded-lg shadow-xs divide-gray-50">
                 <div class="px-5 pt-5 pb-6 space-y-6">
                     <div class="flex items-center justify-between">
                         <div>
-                            <img
-                                class="w-auto h-8"
-                                src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                                alt="Workflow"
-                            />
+                            <img class="w-auto h-10" src="/img/logos/logo.png" alt="Nicole D'Andrea Consulting Logo" />
                         </div>
                         <div class="-mr-2">
                             <button
+                                @click="open = false"
                                 type="button"
-                                class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
+                                class="inline-flex items-center justify-center p-2 text-gray-400 transition duration-150 ease-in-out rounded-md hover:text-bodyCopyDark hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-bodyCopyDark"
                             >
                                 <!-- Heroicon name: x -->
                                 <svg
@@ -73,156 +80,13 @@
                     </div>
                     <div>
                         <nav class="grid grid-cols-1 gap-7">
+                            {% for item in navigation.items %}
                             <a
-                                href="#"
-                                class="flex items-center p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
+                                href="{{ item.url }}"
+                                class="inline-flex items-center space-x-2 text-base leading-6 transition duration-150 ease-in-out text-bodyCopyDark group hover:text-gray-900 focus:text-gray-900"
+                                >{{ item.text }}</a
                             >
-                                <div
-                                    class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md"
-                                >
-                                    <!-- Heroicon name: chart-bar -->
-                                    <svg
-                                        class="w-6 h-6"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="text-base font-medium leading-6 text-gray-900">Analytics</div>
-                            </a>
-                            <a
-                                href="#"
-                                class="flex items-center p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
-                            >
-                                <div
-                                    class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md"
-                                >
-                                    <!-- Heroicon name: cursor-click -->
-                                    <svg
-                                        class="w-6 h-6"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="text-base font-medium leading-6 text-gray-900">Engagement</div>
-                            </a>
-                            <a
-                                href="#"
-                                class="flex items-center p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
-                            >
-                                <div
-                                    class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md"
-                                >
-                                    <!-- Heroicon name: shield-check -->
-                                    <svg
-                                        class="w-6 h-6"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="text-base font-medium leading-6 text-gray-900">Security</div>
-                            </a>
-                            <a
-                                href="#"
-                                class="flex items-center p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
-                            >
-                                <div
-                                    class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md"
-                                >
-                                    <!-- Heroicon name: view-grid -->
-                                    <svg
-                                        class="w-6 h-6"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="text-base font-medium leading-6 text-gray-900">Integrations</div>
-                            </a>
-                            <a
-                                href="#"
-                                class="flex items-center p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
-                            >
-                                <div
-                                    class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md"
-                                >
-                                    <!-- Heroicon name: refresh -->
-                                    <svg
-                                        class="w-6 h-6"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="text-base font-medium leading-6 text-gray-900">Automations</div>
-                            </a>
-                            <a
-                                href="#"
-                                class="flex items-center p-3 -m-3 space-x-4 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50"
-                            >
-                                <div
-                                    class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md"
-                                >
-                                    <!-- Heroicon name: document-report -->
-                                    <svg
-                                        class="w-6 h-6"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="text-base font-medium leading-6 text-gray-900">Reports</div>
-                            </a>
+                            {% endfor %}
                         </nav>
                     </div>
                 </div>

@@ -1,9 +1,11 @@
 <section id="contact" class="relative">
     <div class="relative max-w-6xl mx-auto lg:grid lg:grid-cols-5">
-        <div class="px-4 py-16 sm:px-6 lg:col-span-2 lg:px-6 lg:py-24 xl:pr-8">
+        <div class="px-4 py-8 sm:px-6 lg:col-span-2 lg:px-6 lg:py-24 xl:pr-8">
             <div class="max-w-lg mx-auto">
-                <h2 class="text-2xl font-medium leading-8 text-headerDark sm:text-3xl sm:leading-9">Get in touch</h2>
-                <dl class="mt-4 text-base leading-6 text-bodyCopyDark">
+                <h2 class="text-2xl font-medium leading-8 text-headerDark sm:text-5xl sm:leading-9">
+                    <span class="script-font text-primaryColor">Get In Touch!</span>
+                </h2>
+                <dl class="mt-6 text-base leading-6 text-bodyCopyDark">
                     <div>
                         <dt class="sr-only">Postal address</dt>
                         <dd>
@@ -35,9 +37,16 @@
                 </dl>
             </div>
         </div>
-        <div class="px-4 py-16 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-8">
+        <div class="px-4 py-8 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-8">
             <div class="max-w-lg mx-auto lg:max-w-none">
-                <form name="contact-form" action="/thank-you" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" class="grid grid-cols-1 px-6 py-8 rounded-lg shadow-xl gap-y-6">
+                <form
+                    name="contact-form"
+                    action="/thank-you"
+                    netlify
+                    netlify-honeypot="bot-field"
+                    data-netlify-recaptcha="true"
+                    class="grid grid-cols-1 px-6 py-8 rounded-lg shadow-xl gap-y-6"
+                >
                     <div class="hidden">
                         <label for="bot-field">Don’t fill this out if you're human:</label>
                         <input name="bot-field" />

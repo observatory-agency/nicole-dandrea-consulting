@@ -23,3 +23,9 @@ p, li, a, small, ul {
     margin-top: 20px;
     width: 40px;
 }
+
+.script-font {
+    font-family: neonoir,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}

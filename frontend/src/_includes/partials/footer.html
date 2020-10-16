@@ -1,11 +1,11 @@
 <footer class="bg-gray-50">
     <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-        <nav class="flex flex-wrap justify-center -mx-5 -my-2">
-            <div class="flex items-center space-x-4">
+        <nav class="flex flex-wrap justify-center">
+            <div class="flex flex-col items-center space-y-4 md:space-y-0 md:space-x-4 md:flex-row">
                 {% for item in navigation.items %}
                 <a
                     href="{{ item.url }}"
-                    class="inline-flex items-center space-x-2 text-base leading-6 text-bodyCopyDark transition duration-150 ease-in-out group hover:text-gray-900 focus:text-gray-900"
+                    class="inline-flex items-center space-x-2 text-base leading-6 text-center transition duration-150 ease-in-out text-bodyCopyDark group hover:text-gray-900 focus:text-gray-900"
                     >{{ item.text }}</a
                 >
                 {% endfor %}

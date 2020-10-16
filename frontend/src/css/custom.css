@@ -31,7 +31,7 @@ p, li, a, small, ul {
 }
 
 #about-photo {
-    object-position: 0 calc(100% + 310px);
+    object-position: 0 calc(100% + 260px);
 }
 
 @media(min-width: 768px) {

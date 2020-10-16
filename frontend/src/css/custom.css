@@ -29,3 +29,13 @@ p, li, a, small, ul {
     font-weight: 700;
     font-style: normal;
 }
+
+#about-photo {
+    object-position: 0 calc(100% + 310px);
+}
+
+@media(min-width: 768px) {
+    #about-photo {
+        object-position: initial
+    }
+}

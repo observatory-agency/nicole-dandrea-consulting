@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
         <title>{{ title }}</title>
-        <link rel="icon" href="/img/favicon.png" type="image/png" />
+        <meta name="description" content="Build an extraordinary yoga or wellness business | Nicole D'Andrea Consulting">
+        <link rel="icon" href="/img/favicon.png" type="image/png"/>
+
+        <meta property="og:title" content="Nicole D'Andrea Consulting">
+        <meta property="og:description" content="Build an extraordinary yoga or wellness business">
+        <meta property="og:image" content="https://nicoledandreaconsulting.com/img/homepage-hero.jpg">
+        <meta property="og:url" content="https://nicoledandreaconsulting.com/">
 
         <link rel="stylesheet" href="https://use.typekit.net/rhb6ivy.css">
-        <link rel="stylesheet" href="/css/styles.css" />
-        <link rel="stylesheet" href="/css/custom.css" />
+        <link rel="stylesheet" href="/css/styles.css"/>
+        <link rel="stylesheet" href="/css/custom.css"/>
 
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer="defer"></script>
 
     </head>
     <body>
         {% include "partials/main-nav.html" %}
         <main tabindex="-1" id="main-content">
-        {% block content %}{% endblock %}
+            {% block content %}{% endblock %}
         </main>
         {% include "partials/footer.html" %}
     </body>

@@ -1,21 +1,38 @@
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: jubilat,serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: jubilat, serif;
     font-weight: 400;
     font-style: normal;
 }
 
-p, li, a, small, ul {
-    font-family: poppins,sans-serif;
+p,
+li,
+a,
+small,
+ul {
+    font-family: poppins, sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.darkTextOnPrimary {
+    color: hsl(340deg 32% 12%);
 }
 
 .dash-trail:after {
-    background: #AF7D8E;
+    background: #af7d8e;
     display: block;
     content: '';
     height: 5px;
@@ -25,7 +42,7 @@ p, li, a, small, ul {
 }
 
 .script-font {
-    font-family: neonoir,sans-serif;
+    font-family: neonoir, sans-serif;
     font-weight: 700;
     font-style: normal;
 }
@@ -34,8 +51,8 @@ p, li, a, small, ul {
     object-position: 0 calc(100% + 260px);
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     #about-photo {
-        object-position: initial
+        object-position: initial;
     }
 }

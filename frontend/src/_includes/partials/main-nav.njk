@@ -28,8 +28,14 @@
                 <a
                     href="{{ item.url }}"
                     class="inline-flex items-center space-x-2 text-lg leading-6 transition duration-150 ease-in-out text-bodyCopyDark group hover:text-gray-900 focus:text-gray-900"
-                    >{{ item.text }}</a
-                >
+                    {% if item.target and item.rel %}
+                    target="{{ item.target }}"
+                    rel="noopener"
+                    rel="{{ item.rel }}"
+                    {% endif %}
+                    >
+                    {{ item.text }}
+                </a>
                 {% endfor %}
             </div>
         </nav>

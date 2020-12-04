@@ -8,7 +8,6 @@ module.exports = {
     purge: {
         mode: 'all',
         content: ['./src/_includes/**/*.html'],
-        content: ['./src/_includes/partials/*.njk'],
     },
     theme: {
         extend: {
